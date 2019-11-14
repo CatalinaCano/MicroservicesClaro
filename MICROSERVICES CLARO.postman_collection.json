@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "19ab3e38-8b21-465d-a7f7-23454b22e727",
+		"name": "MICROSERVICES CLARO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Client URL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7071/api/create_client?name=Ximena&surname=Cano&phone=3196943080&address=Transversal 123&identification=1020808341",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"create_client"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ximena"
+						},
+						{
+							"key": "surname",
+							"value": "Cano"
+						},
+						{
+							"key": "phone",
+							"value": "3196943080"
+						},
+						{
+							"key": "address",
+							"value": "Transversal 123"
+						},
+						{
+							"key": "identification",
+							"value": "1020808341"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Client JSON",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n   \"identification\":\"787584754\",\r\n   \"name\":\"Giovanny\",\r\n   \"surname\":\"Salazar\",\r\n   \"phone\":\"567890\",\r\n   \"address\":\"Avenida Siempre Viva\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/create_client_json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"create_client_json"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
